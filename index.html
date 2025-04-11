@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Web App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Hyperport Security Solutions</h1>
+
+    <div class="container">
+        <!-- Set the preferred max width here -->
+        <div style="max-width: 1080px; margin: 0 auto">
+            <!-- <canvas id="canvas" width="720" height="460" style="width: 100%; object-fit: contain"></canvas> -->
+            <canvas id="canvas" width="1920" height="1080" style="width: 100%; object-fit: contain"></canvas>
+        </div>
+
+        <script src="https://unpkg.com/@rive-app/canvas"></script>
+
+        <script>
+          const r = new rive.Rive({
+            src: './secure_access_1920_1080.riv',
+            canvas: document.getElementById("canvas"),
+            autoplay: true,
+            stateMachines: "State Machine 1",
+            onLoad: () => {
+              r.resizeDrawingSurfaceToCanvas();
+              window.addEventListener("resize", () => {
+                r.resizeDrawingSurfaceToCanvas();
+            });
+            },
+          });
+        </script>
+    </div>
+</body>
+</html>
