@@ -12,7 +12,6 @@
     <div class="container">
         <!-- Set the preferred max width here -->
         <div style="max-width: 1080px; margin: 0 auto">
-            <!-- <canvas id="canvas" width="720" height="460" style="width: 100%; object-fit: contain"></canvas> -->
             <canvas id="canvas" width="1920" height="1080" style="width: 100%; object-fit: contain"></canvas>
         </div>
 
@@ -23,7 +22,7 @@
             src: './secure_access_1920_1080.riv',
             canvas: document.getElementById("canvas"),
             autoplay: true,
-            stateMachines: "State Machine 1",
+            stateMachines: "State Machine",
             onLoad: () => {
               r.resizeDrawingSurfaceToCanvas();
               window.addEventListener("resize", () => {
